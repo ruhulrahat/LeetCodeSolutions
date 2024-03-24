@@ -2,8 +2,8 @@ package arrays
 
 
 fun main() {
-    print(containsDuplicateUnoptimized(intArrayOf(2,3,4, 4)))
-    //print(containsDuplicateOptimized(intArrayOf(2,3,4, 4)))
+    println(containsDuplicateUnoptimized(intArrayOf(2,3,4, 4)))
+    println(containsDuplicateOptimized(intArrayOf(2,3,4, 4)))
 }
 fun containsDuplicateUnoptimized(nums: IntArray): Boolean {
     for (i in nums.indices) {
