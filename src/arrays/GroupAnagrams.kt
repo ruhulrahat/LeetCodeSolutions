@@ -1,9 +1,10 @@
 package arrays
 
 fun main() {
-    println(groupAnagramsUnoptimized(arrayOf("rahat", "akash", "tapash", "tahar")))
-    println(groupAnagramsOptimized(arrayOf("rahat", "akash", "tapash", "tahar")))
-    println(groupAnagramsOptimizedSimplified(arrayOf("rahat", "akash", "tapash", "tahar")))
+    val input  = arrayOf("rahat", "akash", "tapash", "tahar")
+    println(groupAnagramsUnoptimized(input))
+    println(groupAnagramsOptimized(input))
+    println(groupAnagramsOptimizedSimplified(input))
 }
 
 fun groupAnagramsUnoptimized(strs: Array<String>): List<List<String>> {

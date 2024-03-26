@@ -2,8 +2,9 @@ package arrays
 
 
 fun main() {
-    println(containsDuplicateUnoptimized(intArrayOf(2, 3, 4, 4)))
-    println(containsDuplicateOptimized(intArrayOf(2, 3, 4, 4)))
+    val input = intArrayOf(2, 3, 4, 4)
+    println(containsDuplicateUnoptimized(input))
+    println(containsDuplicateOptimized(input))
 }
 
 fun containsDuplicateUnoptimized(nums: IntArray): Boolean {

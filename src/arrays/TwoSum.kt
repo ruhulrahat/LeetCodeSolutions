@@ -2,8 +2,9 @@ package arrays
 
 
 fun main() {
-    println(twoSumUnoptimized(intArrayOf(2, 5, 5, 3, 3, 9, 1), 12).contentToString())
-    println(twoSumOptimized(intArrayOf(2, 5, 5, 3, 3, 9, 1), 12).contentToString())
+    val inputArray = intArrayOf(2, 5, 5, 3, 3, 9, 1)
+    println(twoSumUnoptimized(inputArray, 12).contentToString())
+    println(twoSumOptimized(inputArray, 12).contentToString())
 }
 
 fun twoSumUnoptimized(nums: IntArray, target: Int): IntArray {
