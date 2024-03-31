@@ -2,10 +2,11 @@ package arrays
 
 
 fun main() {
-    val input = intArrayOf(100,4,200,1,3,2)
+    val input = intArrayOf(100, 4, 200, 1, 3, 2)
     println(longestConsecutiveUnoptimized(input))
     println(longestConsecutiveOptimized(input))
 }
+
 fun longestConsecutiveUnoptimized(nums: IntArray): Int {
     if (nums.isEmpty()) return 0
 

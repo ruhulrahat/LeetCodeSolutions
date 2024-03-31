@@ -66,7 +66,8 @@ fun isValidSudokuOptimized(board: Array<CharArray>): Boolean {
                 val num = board[i][j]
                 if (!seen.add("$num in row $i") ||
                     !seen.add("$num in column $j") ||
-                    !seen.add("$num in box ${i / 3}${j / 3}")) return false
+                    !seen.add("$num in box ${i / 3}${j / 3}")
+                ) return false
             }
         }
     }
