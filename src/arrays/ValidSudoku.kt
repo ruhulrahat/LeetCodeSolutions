@@ -18,6 +18,7 @@ fun main() {
 
     println(isValidSudokuUnoptimized(sudoku))
     println(isValidSudokuOptimized(sudoku))
+    println(isValidSudokuOptimizedSimplified(sudoku))
 }
 
 fun isValidSudokuUnoptimized(board: Array<CharArray>): Boolean {
@@ -71,4 +72,26 @@ fun isValidSudokuOptimized(board: Array<CharArray>): Boolean {
     }
     return true
 }
+
+fun isValidSudokuOptimizedSimplified(board: Array<CharArray>): Boolean {
+    val seen = HashSet<String>()
+
+    for (i in 0..<9) {
+        for (j in 0..<9) {
+            val currentVal = board[i][j]
+            if (currentVal != '.') {
+                val rowKey = "$currentVal in row $i"
+                val colKey = "$currentVal in column $j"
+                val boxKey = "$currentVal in box ${i / 3}${j / 3}"
+
+                if (!seen.add(rowKey) || !seen.add(colKey) || !seen.add(boxKey)) {
+                    return false
+                }
+            }
+        }
+    }
+
+    return true
+}
+
 
